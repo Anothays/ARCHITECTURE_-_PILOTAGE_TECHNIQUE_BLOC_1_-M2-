@@ -1,0 +1,71 @@
+/* Mise en page PDF : éviter qu'un élément soit coupé par un saut de page. */
+
+/* Un titre ne reste jamais seul en bas de page : il suit le contenu qu'il annonce. */
+h1, h2, h3, h4 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Une image, un schéma ou un bloc de code ne sont jamais coupés. */
+img, pre, blockquote, figure {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+img {
+  max-width: 100%;
+  max-height: 24cm;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Une ligne de tableau n'est jamais coupée, et l'en-tête est répété sur chaque page. */
+tr, td, th {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+thead {
+  display: table-header-group;
+}
+
+/* Une liste courte et un paragraphe restent groupés. */
+li, p {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  orphans: 3;
+  widows: 3;
+}
+
+/* Un tableau qui tient sur une page n'est pas coupé. S'il est plus long qu'une page,
+   le navigateur le coupe quand même, mais seulement entre deux lignes (règle ci-dessus). */
+table {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Un tableau plus long qu'une page, encadré par <div class="tableau-long">, commence
+   juste après son introduction au lieu de laisser une demi-page vide avant lui. */
+.tableau-long table {
+  break-inside: auto;
+  page-break-inside: auto;
+}
+
+/* Une phrase ou une liste d'introduction reste sur la même page que ce qu'elle annonce. */
+p:has(+ table), p:has(+ .tableau-long), p:has(+ ul), p:has(+ ol), p:has(+ pre),
+p:has(+ p > img), ul:has(+ table), ol:has(+ table) {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Une liste qui annonce un tableau (par exemple la légende des sources) n'est pas coupée. */
+ul:has(+ table), ol:has(+ table) {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Marqueur explicite à placer dans le Markdown quand un saut manuel est nécessaire. */
+.saut-de-page {
+  break-before: page;
+  page-break-before: always;
+}

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="890" viewBox="0 0 760 890" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/>
+    </marker>
+    <marker id="fleche-rouge" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect width="760" height="890" fill="#ffffff"/>
+
+  <text x="40" y="45" font-size="21" font-weight="bold" fill="#111">Vélocité – Cycle de vie d'une réparation (vue métier)</text>
+
+  <!-- Parcours nominal (colonne de gauche) -->
+  <g font-size="16" fill="#111" text-anchor="middle">
+    <rect x="60" y="90" width="270" height="60" rx="6" fill="#dce6f2" stroke="#1f3a5f"/>
+    <text x="195" y="116">Demande déposée</text><text x="195" y="137">(R1)</text>
+
+    <rect x="60" y="190" width="270" height="60" rx="6" fill="#dce6f2" stroke="#1f3a5f"/>
+    <text x="195" y="216">En diagnostic</text><text x="195" y="237">(R2)</text>
+
+    <rect x="60" y="290" width="270" height="60" rx="6" fill="#dce6f2" stroke="#1f3a5f"/>
+    <text x="195" y="316">Devis envoyé</text><text x="195" y="337">(R3, R4)</text>
+
+    <rect x="60" y="390" width="270" height="60" rx="6" fill="#dce6f2" stroke="#1f3a5f"/>
+    <text x="195" y="416">Devis accepté</text><text x="195" y="437">(R5)</text>
+
+    <rect x="60" y="490" width="270" height="60" rx="6" fill="#dce6f2" stroke="#1f3a5f"/>
+    <text x="195" y="526">En réparation</text>
+
+    <rect x="60" y="590" width="270" height="60" rx="6" fill="#dce6f2" stroke="#1f3a5f"/>
+    <text x="195" y="616">Prêt, client prévenu</text><text x="195" y="637">(R8)</text>
+
+    <rect x="60" y="690" width="270" height="60" rx="30" fill="#d4f5df" stroke="#2e8b47" stroke-width="2"/>
+    <text x="195" y="716">Payé et restitué</text><text x="195" y="737">(R9)</text>
+  </g>
+
+  <g stroke="#1f3a5f" stroke-width="2" marker-end="url(#fleche)">
+    <line x1="195" y1="150" x2="195" y2="188"/>
+    <line x1="195" y1="250" x2="195" y2="288"/>
+    <line x1="195" y1="350" x2="195" y2="388"/>
+    <line x1="195" y1="450" x2="195" y2="488"/>
+    <line x1="195" y1="550" x2="195" y2="588"/>
+    <line x1="195" y1="650" x2="195" y2="688"/>
+  </g>
+  <text x="207" y="375" font-size="17" fill="#111">oui</text>
+
+  <!-- Devis refusé (colonne de droite) -->
+  <g font-size="16" fill="#111" text-anchor="middle">
+    <rect x="430" y="290" width="290" height="60" rx="6" fill="#fde2e2" stroke="#c0392b"/>
+    <text x="575" y="316">Devis refusé</text><text x="575" y="337">(R6)</text>
+
+    <rect x="430" y="390" width="290" height="60" rx="30" fill="#eeeeee" stroke="#7f8c8d" stroke-width="2"/>
+    <text x="575" y="416">Restitué sans réparation</text><text x="575" y="437">(diagnostic facturé ou non, R7)</text>
+  </g>
+  <g stroke="#c0392b" stroke-width="2" marker-end="url(#fleche-rouge)">
+    <line x1="330" y1="320" x2="428" y2="320"/>
+    <line x1="575" y1="350" x2="575" y2="388"/>
+  </g>
+  <text x="362" y="310" font-size="17" fill="#111">non</text>
+
+  <!-- Légende -->
+  <line x1="40" y1="780" x2="720" y2="780" stroke="#cccccc"/>
+  <g font-size="14" fill="#333">
+    <text x="40" y="805"><tspan font-weight="bold">Légende</tspan> : bleu = parcours nominal · rouge = devis refusé · formes arrondies = états finaux ·</text>
+    <text x="40" y="827">(Rx) = règle métier du livrable 1.</text>
+    <text x="40" y="853">Les travaux supplémentaires découverts en cours de réparation ne sont pas décrits</text>
+    <text x="40" y="875">dans le dossier (hypothèse : nouveau devis).</text>
+  </g>
+</svg>

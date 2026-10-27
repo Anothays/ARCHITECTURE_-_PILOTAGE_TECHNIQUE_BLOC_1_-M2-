@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1180" viewBox="0 0 880 1180" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="appel" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+    <marker id="evt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="impl" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M1,1 L11,6 L1,11 z" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <rect width="880" height="1180" fill="#ffffff"/>
+
+  <text x="15" y="30" font-size="20" font-weight="bold" fill="#111">GestiMed – Nouveau découpage : fichiers PHP et dépendances</text>
+
+  <!-- ===== Couche entrée et configuration ===== -->
+  <text x="15" y="56" font-size="12" font-weight="bold" fill="#666">ENTRÉE ET CONFIGURATION — public/ et config/</text>
+  <rect x="15" y="62" width="850" height="68" rx="6" fill="#f4f4f4" stroke="#999"/>
+  <g font-size="13" fill="#111">
+    <rect x="25" y="73" width="250" height="47" rx="4" fill="#fff" stroke="#777" stroke-dasharray="4 3"/>
+    <text x="35" y="92" font-weight="bold">config/evenements.php</text>
+    <text x="35" y="111">branche les écouteurs</text>
+    <rect x="315" y="73" width="250" height="47" rx="4" fill="#fff" stroke="#1f3a5f"/>
+    <text x="325" y="92" font-weight="bold">public/agenda.php</text>
+    <text x="325" y="111">contrôleur mince</text>
+    <rect x="605" y="73" width="250" height="47" rx="4" fill="#fff" stroke="#777" stroke-dasharray="4 3"/>
+    <text x="615" y="92" font-weight="bold">config/services.php</text>
+    <text x="615" y="111">choisit les adaptateurs (SMS…)</text>
+  </g>
+  <!-- ===== Couche métier ===== -->
+  <rect x="15" y="145" width="850" height="700" rx="6" fill="#fafbfd" stroke="#999"/>
+  <line x1="440" y1="120" x2="440" y2="183" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+  <text x="25" y="163" font-size="12" font-weight="bold" fill="#666">MÉTIER — src/ (aucun fichier n'importe infra/)</text>
+
+  <g transform="translate(0,25)">
+    <!-- Cadres des modules -->
+    <g stroke="#1f3a5f" fill="#ffffff">
+      <rect x="25" y="160" width="250" height="95" rx="6"/>
+      <rect x="315" y="160" width="250" height="95" rx="6"/>
+      <rect x="605" y="300" width="250" height="115" rx="6"/>
+      <rect x="315" y="545" width="250" height="115" rx="6"/>
+      <rect x="315" y="725" width="250" height="80" rx="6"/>
+    </g>
+    <g stroke="#e67e22" stroke-width="2.5" fill="#fff3e3">
+      <rect x="25" y="300" width="250" height="175" rx="6"/>
+      <rect x="25" y="545" width="250" height="135" rx="6"/>
+      <rect x="605" y="545" width="250" height="175" rx="6"/>
+    </g>
+
+    <!-- Titres des dossiers -->
+    <g font-size="14" font-weight="bold" fill="#1f3a5f">
+      <text x="35" y="182">Referentiel/</text>
+      <text x="325" y="182">PriseRdv/</text>
+      <text x="35" y="322">Agenda/ <tspan fill="#d35400">★ STATUT</tspan></text>
+      <text x="615" y="322">Teleconsultation/</text>
+      <text x="35" y="567">Notifications/ <tspan fill="#d35400">★ SMS</tspan></text>
+      <text x="325" y="567">Facturation/</text>
+      <text x="615" y="567">Tarification/ <tspan fill="#d35400">★ TARIF</tspan></text>
+      <text x="325" y="747">ExportSecu/</text>
+    </g>
+
+    <!-- Fichiers (les interfaces sont en italique) -->
+    <g font-size="13" fill="#111">
+      <text x="35" y="205">Patient.php, Medecin.php</text>
+      <text x="35" y="225" font-style="italic" fill="#2c5d8a">*Repository.php «interface»</text>
+
+      <text x="325" y="205">PriseRdvService.php «Facade»</text>
+      <text x="325" y="225">prendreRdv(), annulerRdv()</text>
+
+      <text x="35" y="345">RendezVous.php «State»</text>
+      <text x="35" y="365">Statut.php (5 ou 6 états)</text>
+      <text x="35" y="385">CalculDuree.php</text>
+      <text x="35" y="405">Evenement/RdvConfirme.php</text>
+      <text x="35" y="425">Evenement/RdvAnnule.php</text>
+      <text x="35" y="445" font-style="italic" fill="#2c5d8a">RdvRepository.php «interface»</text>
+
+      <text x="615" y="345">TeleconsultationService.php</text>
+      <text x="615" y="365" font-style="italic" fill="#2c5d8a">Visio.php «interface»</text>
+      <text x="615" y="385" font-style="italic" fill="#2c5d8a">Paiement.php «interface»</text>
+
+      <text x="35" y="590">NotificationsListener.php</text>
+      <text x="35" y="610">FabriqueCanal.php «Factory»</text>
+      <text x="35" y="630" font-style="italic" fill="#2c5d8a">EnvoiSms.php «interface»</text>
+      <text x="35" y="650" font-style="italic" fill="#2c5d8a">EnvoiEmail.php «interface»</text>
+
+      <text x="325" y="590">FacturationListener.php</text>
+      <text x="325" y="610">Evenement/FactureEmise.php</text>
+      <text x="325" y="630" font-style="italic" fill="#2c5d8a">FactureRepository.php «interface»</text>
+
+      <text x="615" y="590">Tarification.php «Strategy»</text>
+      <text x="615" y="610">TarifGrilleSecu.php</text>
+      <text x="615" y="630">TarifSecteur2.php</text>
+      <text x="615" y="650">TarifTeleconsultation.php</text>
+      <text x="615" y="670" font-style="italic" fill="#2c5d8a">GrilleRepository.php «interface»</text>
+      <text x="615" y="690" font-style="italic" fill="#2c5d8a">Horloge.php «interface»</text>
+
+      <text x="325" y="770">ExportSecuListener.php</text>
+      <text x="325" y="790" font-style="italic" fill="#2c5d8a">DepotExport.php «interface»</text>
+    </g>
+
+    <!-- Appels : use + appel synchrone -->
+    <g stroke="#111" stroke-width="2" marker-end="url(#appel)">
+      <line x1="150" y1="300" x2="150" y2="258"/>
+      <line x1="370" y1="255" x2="252" y2="298"/>
+      <line x1="510" y1="255" x2="640" y2="298"/>
+      <line x1="730" y1="415" x2="730" y2="543"/>
+      <line x1="565" y1="605" x2="603" y2="605"/>
+    </g>
+
+    <!-- Événements : publication sans import de l'écouteur -->
+    <g stroke="#c0392b" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#evt)">
+      <line x1="150" y1="475" x2="150" y2="543"/>
+      <line x1="275" y1="465" x2="398" y2="543"/>
+      <line x1="275" y1="395" x2="603" y2="395"/>
+      <line x1="440" y1="660" x2="440" y2="723"/>
+    </g>
+    <g font-size="12" fill="#c0392b">
+      <text x="158" y="515">RdvConfirme, RdvAnnule</text>
+      <text x="345" y="490">RdvConfirme, RdvAnnule</text>
+      <text x="300" y="387">RdvAnnule (remboursement)</text>
+      <text x="448" y="697">FactureEmise</text>
+    </g>
+  </g>
+
+  <!-- ===== Implémentation des ports ===== -->
+  <line x1="440" y1="882" x2="440" y2="848" stroke="#111" stroke-width="2" marker-end="url(#impl)"/>
+  <text x="455" y="870" font-size="12.5" fill="#111">implémente : infra/ importe les interfaces de src/, jamais l'inverse</text>
+
+  <!-- ===== Couche infrastructure ===== -->
+  <rect x="15" y="882" width="850" height="160" rx="6" fill="#f4f4f4" stroke="#999"/>
+  <text x="25" y="900" font-size="12" font-weight="bold" fill="#666">INFRASTRUCTURE — infra/ (adaptateurs)</text>
+  <g stroke="#555" fill="#ffffff">
+    <rect x="25" y="908" width="250" height="65" rx="4"/>
+    <rect x="315" y="908" width="250" height="65" rx="4"/>
+    <rect x="605" y="908" width="250" height="65" rx="4"/>
+    <rect x="25" y="983" width="250" height="50" rx="4"/>
+    <rect x="315" y="983" width="250" height="50" rx="4"/>
+    <rect x="605" y="983" width="250" height="50" rx="4" stroke-dasharray="4 3"/>
+  </g>
+  <g font-size="13" fill="#111">
+    <text x="35" y="928" font-weight="bold">Bdd/Pdo*Repository.php</text>
+    <text x="35" y="946" fill="#444">→ les *Repository</text>
+    <text x="35" y="964" fill="#444">requêtes SQL paramétrées</text>
+
+    <text x="325" y="928" font-weight="bold">Sms/SmsAncienFournisseur.php</text>
+    <text x="325" y="946" font-weight="bold">Sms/SmsNouveauFournisseur.php</text>
+    <text x="325" y="964" fill="#444">→ EnvoiSms</text>
+
+    <text x="615" y="928" font-weight="bold">Email/EmailFournisseur.php</text>
+    <text x="615" y="946" fill="#444">→ EnvoiEmail</text>
+    <text x="615" y="964" fill="#444"><tspan font-weight="bold" fill="#111">HorlogeSysteme.php</tspan> → Horloge</text>
+
+    <text x="35" y="1003" font-weight="bold">Export/DepotFichierDisque.php</text>
+    <text x="35" y="1021" fill="#444">→ DepotExport</text>
+
+    <text x="325" y="1003" font-weight="bold">Visio/…  et  Paiement/…</text>
+    <text x="325" y="1021" fill="#444">→ Visio, Paiement</text>
+
+    <text x="615" y="1003" font-weight="bold" fill="#555">tests/Stubs/ (StubSms…)</text>
+    <text x="615" y="1021" fill="#555">mêmes interfaces, pour les tests</text>
+  </g>
+
+  <!-- ===== Légende ===== -->
+  <line x1="15" y1="1058" x2="865" y2="1058" stroke="#ccc"/>
+  <text x="15" y="1080" font-size="13.5" font-weight="bold" fill="#111">Légende</text>
+  <g font-size="13" fill="#222">
+    <line x1="90" y1="1076" x2="140" y2="1076" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+    <text x="150" y="1080">appel : le fichier importe (use) la cible, l'appelle et attend sa réponse.</text>
+    <line x1="90" y1="1100" x2="140" y2="1100" stroke="#c0392b" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#evt)"/>
+    <text x="150" y="1104">événement : le fichier publie un objet ; il n'importe pas ses écouteurs (config/evenements.php).</text>
+    <line x1="90" y1="1124" x2="140" y2="1124" stroke="#111" stroke-width="2" marker-end="url(#impl)"/>
+    <text x="150" y="1128">implémente : l'adaptateur réalise une interface du métier (en italique bleu).</text>
+    <rect x="95" y="1140" width="40" height="14" fill="#fff3e3" stroke="#e67e22" stroke-width="2"/>
+    <text x="150" y="1152">★ dossiers où vont le statut, le SMS et le tarif ; un cadre = un dossier, une ligne = un fichier.</text>
+  </g>
+</svg>

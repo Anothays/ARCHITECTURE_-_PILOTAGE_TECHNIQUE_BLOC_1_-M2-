@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="960" viewBox="0 0 940 960" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="appel" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+    <marker id="evt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="impl" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M1,1 L11,6 L1,11 z" fill="#ffffff" stroke="#555" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <rect width="940" height="960" fill="#ffffff"/>
+  <text x="20" y="30" font-size="20" font-weight="bold" fill="#111">Théo – Nouveau découpage de Commande.js : modules et dépendances</text>
+
+  <!-- Entrée -->
+  <rect x="345" y="48" width="260" height="52" rx="5" fill="#f4f4f4" stroke="#777"/>
+  <text x="475" y="70" text-anchor="middle" font-size="13" font-weight="bold">Contrôleurs</text>
+  <text x="475" y="88" text-anchor="middle" font-size="12">site, panier, back-office</text>
+  <line x1="475" y1="100" x2="475" y2="156" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+
+  <!-- Zone MÉTIER -->
+  <rect x="30" y="118" width="880" height="472" rx="6" fill="#fafbfd" stroke="#999"/>
+  <text x="40" y="136" font-size="12" font-weight="bold" fill="#666">MÉTIER — src/ (aucun fichier n'importe infra/, ni Stripe, ni SendGrid, ni SQL)</text>
+
+  <!-- tarification -->
+  <rect x="40" y="158" width="260" height="146" rx="6" fill="#fff3e3" stroke="#e67e22" stroke-width="2.5"/>
+  <text x="50" y="178" font-size="14" font-weight="bold" fill="#1f3a5f">tarification/ <tspan fill="#d35400">★ « −15 % pros »</tspan></text>
+  <g font-size="12" fill="#111">
+    <text x="50" y="198">Tarification.js : seul calcul du prix</text>
+    <text x="50" y="216" font-weight="bold" fill="#d35400">remises/RemisePro.js : −15 %</text>
+    <text x="50" y="234">remises/RemiseAbonne.js, CodePromo.js,</text>
+    <text x="50" y="250">Parrainage.js  «Strategy»</text>
+    <text x="50" y="270">familles/The.js, Accessoire.js,</text>
+    <text x="50" y="286">Theiere.js (TVA, port)  «Strategy»</text>
+  </g>
+
+  <!-- commande -->
+  <rect x="350" y="158" width="250" height="146" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="1.5"/>
+  <text x="360" y="178" font-size="14" font-weight="bold" fill="#1f3a5f">commande/</text>
+  <g font-size="12" fill="#111">
+    <text x="360" y="198">ValiderCommande.js  «Facade»</text>
+    <text x="360" y="216">Commande.js : statuts et</text>
+    <text x="360" y="232">transitions  «State»</text>
+    <text x="360" y="252">CommandeRepository (prise)</text>
+    <text x="360" y="272">publie CommandePayee,</text>
+    <text x="360" y="288">CommandeExpediee…</text>
+  </g>
+
+  <!-- paiement -->
+  <rect x="650" y="158" width="250" height="146" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="1.5"/>
+  <text x="660" y="178" font-size="14" font-weight="bold" fill="#1f3a5f">paiement/</text>
+  <g font-size="12" fill="#111">
+    <text x="660" y="198">Paiement.js : la prise</text>
+    <text x="660" y="214">encaisser(commande, euros)</text>
+    <text x="660" y="230">rembourser(commande, euros)</text>
+    <text x="660" y="250">ChoixPaiement.js : choisit</text>
+    <text x="660" y="266">l'adaptateur selon le mode</text>
+    <text x="660" y="286">aucun nom de fournisseur ici</text>
+  </g>
+
+  <!-- appels depuis commande -->
+  <line x1="350" y1="200" x2="302" y2="200" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+  <text x="326" y="192" text-anchor="middle" font-size="11">1</text>
+  <line x1="600" y1="200" x2="648" y2="200" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+  <text x="624" y="192" text-anchor="middle" font-size="11">2</text>
+
+  <!-- catalogue -->
+  <rect x="40" y="322" width="260" height="50" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="1.5"/>
+  <text x="50" y="342" font-size="14" font-weight="bold" fill="#1f3a5f">catalogue/</text>
+  <text x="50" y="361" font-size="12">CatalogueRepository, StockRepository</text>
+  <line x1="370" y1="304" x2="302" y2="340" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+  <text x="345" y="336" font-size="11">3</text>
+
+  <!-- bus d'événements -->
+  <line x1="475" y1="304" x2="475" y2="402" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="8 5"/>
+  <text x="485" y="350" font-size="11" fill="#c0392b">4 : publie</text>
+  <line x1="60" y1="405" x2="880" y2="405" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="8 5"/>
+  <text x="490" y="396" font-size="12" font-weight="bold" fill="#c0392b">événement « CommandePayee » (file de tâches)</text>
+  <g stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4">
+    <line x1="120" y1="405" x2="120" y2="430" marker-end="url(#evt)"/>
+    <line x1="295" y1="405" x2="295" y2="430" marker-end="url(#evt)"/>
+    <line x1="470" y1="405" x2="470" y2="430" marker-end="url(#evt)"/>
+    <line x1="645" y1="405" x2="645" y2="430" marker-end="url(#evt)"/>
+    <line x1="820" y1="405" x2="820" y2="430" marker-end="url(#evt)"/>
+  </g>
+
+  <!-- écouteurs -->
+  <g stroke="#1f3a5f" stroke-width="1.5" fill="#ffffff">
+    <rect x="40" y="432" width="160" height="140" rx="6"/>
+    <rect x="215" y="432" width="160" height="140" rx="6"/>
+    <rect x="390" y="432" width="160" height="140" rx="6"/>
+    <rect x="565" y="432" width="160" height="140" rx="6"/>
+    <rect x="740" y="432" width="160" height="140" rx="6" stroke-dasharray="6 4"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#1f3a5f">
+    <text x="48" y="452">notifications/</text>
+    <text x="223" y="452">fidelite/</text>
+    <text x="398" y="452">facturation/</text>
+    <text x="573" y="452">ventes/</text>
+    <text x="748" y="452">avis/ (demain)</text>
+  </g>
+  <g font-size="12" fill="#111">
+    <text x="48" y="472">écoute, puis</text>
+    <text x="48" y="488">FabriqueCanal</text>
+    <text x="48" y="504">«Factory» : SMS</text>
+    <text x="48" y="520">ou email</text>
+    <text x="48" y="540">prises EnvoiSms,</text>
+    <text x="48" y="556">EnvoiEmail</text>
+
+    <text x="223" y="472">crédite les points</text>
+    <text x="223" y="488">(1 point par euro)</text>
+    <text x="223" y="508">crédite le parrain</text>
+    <text x="223" y="524">🤔</text>
+
+    <text x="398" y="472">FacturePdf lit les</text>
+    <text x="398" y="488">montants figés à la</text>
+    <text x="398" y="504">validation : plus</text>
+    <text x="398" y="520">aucun recalcul</text>
+
+    <text x="573" y="472">annonce la vente</text>
+    <text x="573" y="488">sur #ventes</text>
+    <text x="573" y="508">prise</text>
+    <text x="573" y="524">AnnonceVentes</text>
+
+    <text x="748" y="472">demande un avis</text>
+    <text x="748" y="488">au client 🤔</text>
+    <text x="748" y="508">nouveau fichier ;</text>
+    <text x="748" y="524">commande/ n'est</text>
+    <text x="748" y="540">pas modifié</text>
+  </g>
+
+  <!-- Zone TECHNIQUE -->
+  <rect x="30" y="610" width="880" height="185" rx="6" fill="#f4f4f4" stroke="#999"/>
+  <text x="40" y="630" font-size="12" font-weight="bold" fill="#666">TECHNIQUE — infra/</text>
+  <g stroke="#555" stroke-width="1.2" fill="#ffffff">
+    <rect x="40" y="645" width="180" height="135" rx="5"/>
+    <rect x="235" y="645" width="215" height="135" rx="5"/>
+    <rect x="465" y="645" width="160" height="135" rx="5"/>
+    <rect x="690" y="645" width="210" height="135" rx="5" stroke="#e67e22" stroke-width="2.5"/>
+  </g>
+  <g font-size="12" fill="#111">
+    <text x="48" y="664" font-weight="bold">bdd/</text>
+    <text x="48" y="682">Postgres*Repository.js</text>
+    <text x="48" y="698">commandes, stock,</text>
+    <text x="48" y="714">clients, points</text>
+    <text x="48" y="734">seul endroit qui</text>
+    <text x="48" y="750">contient du SQL</text>
+
+    <text x="243" y="664" font-weight="bold">messages/</text>
+    <text x="243" y="682">TwilioSms.js</text>
+    <text x="243" y="698">SendgridEmail.js</text>
+    <text x="243" y="714">NouvelEmail.js (nouveau)</text>
+    <text x="243" y="734">Decorator « nouvelle</text>
+    <text x="243" y="750">tentative » si panne 🤔</text>
+
+    <text x="473" y="664" font-weight="bold">slack/</text>
+    <text x="473" y="682">SlackAnnonce.js</text>
+
+    <text x="698" y="664" font-weight="bold">paiement/ <tspan fill="#d35400">★ Stripe est ici</tspan></text>
+    <text x="698" y="682" font-weight="bold" fill="#d35400">StripePaiement.js</text>
+    <text x="698" y="698">PaypalPaiement.js</text>
+    <text x="698" y="714">VirementManuel.js</text>
+    <text x="698" y="730">ApplePayPaiement.js (nouveau)</text>
+    <text x="698" y="750">StubPaiement.js (tests)</text>
+  </g>
+
+  <!-- implémentations -->
+  <g stroke="#555" stroke-width="1.5" fill="none">
+    <polyline points="40,712 22,712 22,347 38,347" marker-end="url(#impl)"/>
+    <polyline points="900,712 920,712 920,232 902,232" marker-end="url(#impl)"/>
+    <line x1="300" y1="645" x2="150" y2="574" marker-end="url(#impl)"/>
+    <line x1="545" y1="645" x2="630" y2="574" marker-end="url(#impl)"/>
+  </g>
+
+  <!-- Légende -->
+  <rect x="20" y="810" width="900" height="140" rx="6" fill="#fafafa" stroke="#999"/>
+  <text x="35" y="832" font-size="13" font-weight="bold">Légende</text>
+  <line x1="35" y1="851" x2="85" y2="851" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+  <text x="95" y="855" font-size="12">appel : le module de départ attend la réponse (1 calculer le prix, 2 encaisser, 3 réserver le stock).</text>
+  <line x1="35" y1="873" x2="85" y2="873" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#evt)"/>
+  <text x="95" y="877" font-size="12">événement : commande/ annonce « CommandePayee » sans attendre ; chaque écouteur réagit seul, et une panne n'arrête pas la vente.</text>
+  <line x1="35" y1="895" x2="85" y2="895" stroke="#555" stroke-width="1.5" marker-end="url(#impl)"/>
+  <text x="95" y="899" font-size="12">implémente : l'adaptateur technique respecte une prise du métier ; c'est infra/ qui dépend de src/, jamais l'inverse.</text>
+  <rect x="35" y="910" width="50" height="16" rx="3" fill="#fff3e3" stroke="#e67e22" stroke-width="2.5"/>
+  <text x="95" y="923" font-size="12">★ réponses à l'énoncé : la règle « −15 % pour les pros » est dans tarification/remises/, Stripe est dans infra/paiement/.</text>
+  <text x="95" y="942" font-size="12">Cadre en tirets : module qui n'existe pas encore (« demander un avis ») ; 🤔 : règle à valider avec le fondateur.</text>
+</svg>

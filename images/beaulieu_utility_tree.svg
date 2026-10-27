@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="890" height="834" viewBox="0 0 890 834" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#111">
+<rect width="890" height="834" fill="#ffffff"/>
+<text x="20" y="45" font-size="20" font-weight="bold">Mairie de Beaulieu – Utility tree du portail famille</text>
+<rect x="20" y="70" width="170" height="60" fill="#9fb6d6" stroke="#222" stroke-width="1.5"/><text x="105" y="105" text-anchor="middle" font-weight="bold">Attribut</text>
+<rect x="190" y="70" width="380" height="60" fill="#9fb6d6" stroke="#222" stroke-width="1.5"/><text x="380" y="105" text-anchor="middle" font-weight="bold">Scénario</text>
+<rect x="570" y="70" width="150" height="60" fill="#9fb6d6" stroke="#222" stroke-width="1.5"/><text x="645" y="105" text-anchor="middle" font-weight="bold">Importance métier</text>
+<rect x="720" y="70" width="150" height="60" fill="#9fb6d6" stroke="#222" stroke-width="1.5"/><text x="795" y="105" text-anchor="middle" font-weight="bold">Difficulté technique</text>
+<rect x="190" y="130" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="158.5" text-anchor="middle">QS1 – Inscription à la cantine sans aide,</text>
+<text x="380" y="177.5" text-anchor="middle">en moins de 5 min, 9 testeurs sur 10</text>
+<rect x="570" y="130" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="168" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="130" width="150" height="66" fill="#f9d79f" stroke="#222" stroke-width="1.5"/><text x="795" y="168" text-anchor="middle" font-size="16" font-weight="bold">M</text>
+<rect x="190" y="196" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="224.5" text-anchor="middle">QS6 – Inscription et paiement au lecteur</text>
+<text x="380" y="243.5" text-anchor="middle">d'écran et au clavier, conformité RGAA</text>
+<rect x="570" y="196" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="234" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="196" width="150" height="66" fill="#f9d79f" stroke="#222" stroke-width="1.5"/><text x="795" y="234" text-anchor="middle" font-size="16" font-weight="bold">M</text>
+<rect x="190" y="262" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="290.5" text-anchor="middle">QS7 – Toutes les démarches sur un écran</text>
+<text x="380" y="309.5" text-anchor="middle">de 360 pixels, sans zoom</text>
+<rect x="570" y="262" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="300" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="262" width="150" height="66" fill="#d5f5e3" stroke="#222" stroke-width="1.5"/><text x="795" y="300" text-anchor="middle" font-size="16" font-weight="bold">L</text>
+<rect x="190" y="328" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="356.5" text-anchor="middle">QS8 – Agents : mêmes écrans que les parents,</text>
+<text x="380" y="375.5" text-anchor="middle">une seule formation de 2 h au plus</text>
+<rect x="570" y="328" width="150" height="66" fill="#f9d79f" stroke="#222" stroke-width="1.5"/><text x="645" y="366" text-anchor="middle" font-size="16" font-weight="bold">M</text>
+<rect x="720" y="328" width="150" height="66" fill="#f9d79f" stroke="#222" stroke-width="1.5"/><text x="795" y="366" text-anchor="middle" font-size="16" font-weight="bold">M</text>
+<rect x="190" y="394" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="422.5" text-anchor="middle">QS2 – Second facteur pour 100 % des comptes,</text>
+<text x="380" y="441.5" text-anchor="middle">parents et agents</text>
+<rect x="570" y="394" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="432" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="394" width="150" height="66" fill="#d5f5e3" stroke="#222" stroke-width="1.5"/><text x="795" y="432" text-anchor="middle" font-size="16" font-weight="bold">L</text>
+<rect x="190" y="460" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="488.5" text-anchor="middle">QS3 – Fiche et PAI d'un enfant invisibles hors</text>
+<text x="380" y="507.5" text-anchor="middle">du foyer et des agents habilités, accès tracés</text>
+<rect x="570" y="460" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="498" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="460" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="795" y="498" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="190" y="526" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="554.5" text-anchor="middle">QS4 – Aucune coupure de plus de 5 min</text>
+<text x="380" y="573.5" text-anchor="middle">du 28 août au 3 septembre</text>
+<rect x="570" y="526" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="564" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="526" width="150" height="66" fill="#f9d79f" stroke="#222" stroke-width="1.5"/><text x="795" y="564" text-anchor="middle" font-size="16" font-weight="bold">M</text>
+<rect x="190" y="592" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="620.5" text-anchor="middle">QS5 – 95 % des pages en moins de 3 s,</text>
+<text x="380" y="639.5" text-anchor="middle">le 1er septembre de 18 h à 22 h</text>
+<rect x="570" y="592" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="630" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="592" width="150" height="66" fill="#d5f5e3" stroke="#222" stroke-width="1.5"/><text x="795" y="630" text-anchor="middle" font-size="16" font-weight="bold">L</text>
+<rect x="190" y="658" width="380" height="66" fill="#ffffff" stroke="#222" stroke-width="1.5"/><text x="380" y="686.5" text-anchor="middle">QS9 – Aucune compétence serveur en interne,</text>
+<text x="380" y="705.5" text-anchor="middle">2 h d'intervention par mois au plus</text>
+<rect x="570" y="658" width="150" height="66" fill="#f4b6b0" stroke="#222" stroke-width="1.5"/><text x="645" y="696" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+<rect x="720" y="658" width="150" height="66" fill="#d5f5e3" stroke="#222" stroke-width="1.5"/><text x="795" y="696" text-anchor="middle" font-size="16" font-weight="bold">L</text>
+<rect x="20" y="130" width="170" height="264" fill="#dce6f2" stroke="#222" stroke-width="1.5"/><text x="105" y="267" text-anchor="middle" font-weight="bold">Utilisabilité</text>
+<rect x="20" y="394" width="170" height="132" fill="#dce6f2" stroke="#222" stroke-width="1.5"/><text x="105" y="465" text-anchor="middle" font-weight="bold">Sécurité</text>
+<rect x="20" y="526" width="170" height="132" fill="#dce6f2" stroke="#222" stroke-width="1.5"/><text x="105" y="587.5" text-anchor="middle" font-weight="bold">Disponibilité</text>
+<text x="105" y="606.5" text-anchor="middle" font-weight="bold">et performance</text>
+<rect x="20" y="658" width="170" height="66" fill="#dce6f2" stroke="#222" stroke-width="1.5"/><text x="105" y="696" text-anchor="middle" font-weight="bold">Exploitabilité</text>
+<g font-size="12.5">
+<text x="20" y="759">H = haute · M = moyenne · L = basse. Première note : importance pour le métier ; seconde note : difficulté technique.</text>
+<text x="20" y="779">Les mesures sont des cibles que je propose ; elles doivent être validées par l'élu.</text>
+<text x="20" y="804" font-weight="bold">Ordre de traitement : QS3 (H/H), puis les H/L (QS2, QS5, QS7, QS9), puis les H/M (QS1, QS4, QS6), enfin QS8 (M/M).</text>
+</g>
+</svg>

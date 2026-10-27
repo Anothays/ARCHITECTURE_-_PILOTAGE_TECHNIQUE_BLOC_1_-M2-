@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="930" height="770" viewBox="0 0 930 770" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="appel" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+    <marker id="evt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect width="930" height="770" fill="#ffffff"/>
+
+  <text x="10" y="28" font-size="20" font-weight="bold" fill="#111">Nomad – Affectation des 6 développeurs pendant les 4 mois avant l'été</text>
+  <text x="10" y="50" font-size="13" fill="#444">Chaque cadre est un module ; son contenu indique qui y travaille. Les flèches indiquent qui dépend de qui.</text>
+
+  <!-- ===== SUPPORT ===== -->
+  <rect x="10" y="62" width="910" height="128" rx="6" fill="#fff8e6" stroke="#b7791f"/>
+  <text x="20" y="80" font-size="12" font-weight="bold" fill="#8a5a12">SUPPORT — coder simple, sans perfection : 1 développeur</text>
+  <g font-size="12" fill="#111">
+    <rect x="20" y="92" width="230" height="86" rx="5" fill="#ffffff" stroke="#999" stroke-dasharray="5 4"/>
+    <text x="30" y="110" font-weight="bold" fill="#555">Reporté après l'été (personne)</text>
+    <text x="30" y="128" fill="#555">prix dynamique, messagerie, avis,</text>
+    <text x="30" y="144" fill="#555">export comptable, appli mobile,</text>
+    <text x="30" y="160" fill="#555">recherche par carte, tableau de bord</text>
+
+    <rect x="350" y="92" width="230" height="86" rx="5" fill="#ffffff" stroke="#b7791f" stroke-width="1.5"/>
+    <text x="360" y="110" font-weight="bold">Location : calendrier et prix</text>
+    <text x="360" y="128" font-weight="bold" fill="#8a5a12">Dev 4</text>
+    <text x="360" y="146">terminer le calcul selon la saison,</text>
+    <text x="360" y="162">la durée et les options</text>
+
+    <rect x="680" y="92" width="230" height="86" rx="5" fill="#ffffff" stroke="#b7791f" stroke-width="1.5"/>
+    <text x="690" y="110" font-weight="bold">Urgences et nettoyage</text>
+    <text x="690" y="128" font-weight="bold" fill="#8a5a12">Dev 4, en premier recours</text>
+    <text x="690" y="146">plugins retirés, 7 langues gelées,</text>
+    <text x="690" y="162">paiement en 3 fois si le temps reste</text>
+  </g>
+
+  <!-- ===== CŒUR ===== -->
+  <rect x="10" y="215" width="910" height="175" rx="6" fill="#eef7ee" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="20" y="233" font-size="12" font-weight="bold" fill="#1b5e20">CŒUR — la confiance entre particuliers : 5 développeurs, dont les 2 seniors</text>
+  <g font-size="12" fill="#111">
+    <rect x="20" y="250" width="230" height="122" rx="5" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="30" y="270" font-weight="bold" font-size="13">État des lieux photo</text>
+    <text x="30" y="290" font-weight="bold" fill="#1b5e20">Senior 2 + Dev 2</text>
+    <text x="30" y="310">photos au départ et au retour,</text>
+    <text x="30" y="326">comparaison côte à côte,</text>
+    <text x="30" y="342">photos horodatées et</text>
+    <text x="30" y="358">impossibles à modifier</text>
+
+    <rect x="350" y="250" width="230" height="122" rx="5" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="360" y="270" font-weight="bold" font-size="13">Caution et litige</text>
+    <text x="360" y="290" font-weight="bold" fill="#1b5e20">Senior 1 + Dev 1</text>
+    <text x="360" y="310">empreinte bancaire, cycle de vie</text>
+    <text x="360" y="326">bloquée → libérée / retenue /</text>
+    <text x="360" y="342">litige (pattern State), écran</text>
+    <text x="360" y="358">de Nomad pour trancher un litige</text>
+
+    <rect x="680" y="250" width="230" height="122" rx="5" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="690" y="270" font-weight="bold" font-size="13">Assurance intégrée</text>
+    <text x="690" y="290" font-weight="bold" fill="#1b5e20">Dev 3, relu par Senior 1</text>
+    <text x="690" y="310">attestation à chaque location,</text>
+    <text x="690" y="326">déclaration de sinistre,</text>
+    <text x="690" y="342">prise vers l'assureur</text>
+    <text x="690" y="358">(pattern Adapter)</text>
+  </g>
+
+  <!-- ===== GÉNÉRIQUE ===== -->
+  <rect x="10" y="420" width="910" height="120" rx="6" fill="#eef2f8" stroke="#2b4c7e"/>
+  <text x="485" y="438" font-size="12" font-weight="bold" fill="#1f3a5f">GÉNÉRIQUE — acheté : aucun développeur</text>
+  <g font-size="12" fill="#111">
+    <rect x="20" y="460" width="230" height="64" rx="5" fill="#ffffff" stroke="#2b4c7e"/>
+    <text x="30" y="482" font-weight="bold">Stockage de photos en ligne</text>
+    <text x="30" y="502">service acheté</text>
+
+    <rect x="350" y="460" width="230" height="64" rx="5" fill="#ffffff" stroke="#2b4c7e"/>
+    <text x="360" y="482" font-weight="bold">Prestataire de paiement</text>
+    <text x="360" y="502">empreinte, débit, paiement en 3 fois</text>
+
+    <rect x="680" y="460" width="230" height="64" rx="5" fill="#ffffff" stroke="#2b4c7e"/>
+    <text x="690" y="482" font-weight="bold">API de l'assureur partenaire</text>
+    <text x="690" y="502">fournie par l'assureur</text>
+  </g>
+
+  <!-- ===== Flèches : événements ===== -->
+  <g stroke="#c0392b" stroke-width="2" stroke-dasharray="7 4" fill="none">
+    <line x1="545" y1="178" x2="545" y2="248" marker-end="url(#evt)"/>
+    <line x1="580" y1="165" x2="760" y2="248" marker-end="url(#evt)"/>
+    <line x1="250" y1="285" x2="348" y2="285" marker-end="url(#evt)"/>
+  </g>
+  <g font-size="11" fill="#c0392b" font-style="italic">
+    <text x="539" y="205" text-anchor="end">LocationConfirmée</text>
+    <text x="672" y="196" text-anchor="middle" transform="rotate(24.8 672 196)">LocationConfirmée</text>
+    <text x="300" y="278" text-anchor="middle">RetourConstaté</text>
+  </g>
+
+  <!-- ===== Flèches : appels ===== -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <line x1="350" y1="345" x2="252" y2="345" marker-end="url(#appel)"/>
+    <line x1="580" y1="315" x2="678" y2="315" marker-end="url(#appel)"/>
+    <line x1="135" y1="372" x2="135" y2="458" marker-end="url(#appel)"/>
+    <line x1="465" y1="372" x2="465" y2="458" marker-end="url(#appel)"/>
+    <line x1="795" y1="372" x2="795" y2="458" marker-end="url(#appel)"/>
+  </g>
+  <g font-size="11" fill="#111">
+    <text x="300" y="338" text-anchor="middle">lire les photos</text>
+    <text x="630" y="300" text-anchor="middle">déclarer</text>
+    <text x="630" y="335" text-anchor="middle">un sinistre</text>
+    <text x="142" y="412">envoyer les photos</text>
+    <text x="472" y="412">bloquer, libérer, débiter</text>
+    <text x="802" y="412">souscrire, déclarer</text>
+  </g>
+
+  <!-- ===== Légende ===== -->
+  <rect x="10" y="560" width="910" height="200" rx="6" fill="#fafafa" stroke="#bbb"/>
+  <text x="20" y="582" font-size="13" font-weight="bold" fill="#111">Légende</text>
+  <g font-size="12" fill="#111">
+    <line x1="25" y1="603" x2="85" y2="603" stroke="#111" stroke-width="2" marker-end="url(#appel)"/>
+    <text x="100" y="607">Appel : le module de départ dépend du module d'arrivée ; il l'appelle et attend sa réponse.</text>
+    <line x1="25" y1="628" x2="85" y2="628" stroke="#c0392b" stroke-width="2" stroke-dasharray="7 4" marker-end="url(#evt)"/>
+    <text x="100" y="632">Événement (pattern Observer) : le module de départ annonce un fait sans savoir qui l'écoute ;</text>
+    <text x="100" y="648">le module d'arrivée s'y abonne. Le nom de l'événement est écrit en rouge sur la flèche.</text>
+
+    <rect x="25" y="663" width="18" height="14" fill="#eef7ee" stroke="#2e7d32"/>
+    <text x="50" y="675">Cœur : ce qui fait choisir Nomad (état des lieux, caution, assurance) ; les meilleurs développeurs y vont.</text>
+    <rect x="25" y="686" width="18" height="14" fill="#fff8e6" stroke="#b7791f"/>
+    <text x="50" y="698">Support : nécessaire, mais personne ne choisit Nomad pour cela ; on le code simplement.</text>
+    <rect x="25" y="709" width="18" height="14" fill="#eef2f8" stroke="#2b4c7e"/>
+    <text x="50" y="721">Générique : tout le monde a le même ; on l'achète. Cadre gris en pointillé : reporté après l'été.</text>
+    <text x="25" y="745">Senior 1 et Senior 2 sont les deux développeurs seniors ; Dev 1 à Dev 4 sont les quatre autres développeurs.</text>
+  </g>
+</svg>
